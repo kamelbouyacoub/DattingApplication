@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  userDating: 'http://localhost:5000/api/Users' 
+  userDating: 'https://localhost:5001/api/Users' 
 };
 
 /*
