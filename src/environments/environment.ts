@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  userDating: 'https://localhost:5001/api/Users' 
+  user: 'https://localhost:5001/api/Users', 
+  account: 'https://localhost:5001/api/Account' 
 };
 
 /*
