@@ -6,7 +6,8 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import {  faEnvelope, faHeart,  faUser } from '@fortawesome/free-regular-svg-icons';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
- 
+import { NgxSpinnerModule } from 'ngx-spinner';
+  
 @NgModule({
   declarations: [],
   imports: [
@@ -16,14 +17,17 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
       positionClass: 'toast-bottom-right'
     }),
     TabsModule.forRoot(),
-    NgxGalleryModule
+    NgxGalleryModule,
+    NgxSpinnerModule,
+    
   ],
   exports:[
     BsDropdownModule,
     ToastrModule,
     FontAwesomeModule,
     TabsModule,
-    NgxGalleryModule 
+    NgxGalleryModule,
+    NgxSpinnerModule
   ]
 })
 export class SharedModule { 
