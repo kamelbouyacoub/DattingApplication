@@ -7,6 +7,9 @@ import {  faEnvelope, faHeart,  faUser } from '@fortawesome/free-regular-svg-ico
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { faTrash, faUpload } from '@fortawesome/free-solid-svg-icons';
+ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FileUploadModule } from 'ng2-file-upload';
   
 @NgModule({
   declarations: [],
@@ -19,6 +22,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     TabsModule.forRoot(),
     NgxGalleryModule,
     NgxSpinnerModule,
+    FileUploadModule,
+    BrowserAnimationsModule 
     
   ],
   exports:[
@@ -27,7 +32,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     FontAwesomeModule,
     TabsModule,
     NgxGalleryModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    FileUploadModule
   ]
 })
 export class SharedModule { 
@@ -35,7 +41,7 @@ export class SharedModule {
  *
  */
 constructor(private library: FaIconLibrary) {
-  library.addIcons(faUser, faHeart, faEnvelope);
+  library.addIcons(faUser, faHeart, faEnvelope, faTrash, faUpload);
 }
 
 }

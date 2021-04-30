@@ -26,7 +26,10 @@ export class MemberDetailComponent implements OnInit {
         imagePercent: 100,
         thumbnailsColumns: 4,
         imageAnimation: NgxGalleryAnimation.Slide,
-        preview: false
+        previewArrowsAutoHide : false,
+        arrowNextIcon: "fa fa-arrow-circle-right",
+        arrowPrevIcon : "fa fa-arrow-circle-left"
+
       }
     ]
 
