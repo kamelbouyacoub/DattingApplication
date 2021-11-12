@@ -10,7 +10,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { faTrash, faUpload } from '@fortawesome/free-solid-svg-icons';
  import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FileUploadModule } from 'ng2-file-upload';
-  
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+   
 @NgModule({
   declarations: [],
   imports: [
@@ -23,7 +24,8 @@ import { FileUploadModule } from 'ng2-file-upload';
     NgxGalleryModule,
     NgxSpinnerModule,
     FileUploadModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot()
     
   ],
   exports:[
@@ -33,7 +35,8 @@ import { FileUploadModule } from 'ng2-file-upload';
     TabsModule,
     NgxGalleryModule,
     NgxSpinnerModule,
-    FileUploadModule
+    FileUploadModule,
+    BsDatepickerModule
   ]
 })
 export class SharedModule { 
