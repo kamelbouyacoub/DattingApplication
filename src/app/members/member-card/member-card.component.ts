@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { faEnvelope, faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
+import { ToastrService } from 'ngx-toastr';
+import { Member } from 'src/app/_models/member';
+import { MembersService } from 'src/app/_services/members.service';
 
 @Component({
   selector: 'app-member-card',
@@ -13,7 +16,7 @@ export class MemberCardComponent implements OnInit {
   faUser : any;
   faHeart: any;
   faEnvelope: any;
-  constructor() { }
+  constructor(private memberService: MembersService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.faUser = faUser;
@@ -21,4 +24,9 @@ export class MemberCardComponent implements OnInit {
     this.faEnvelope = faEnvelope;
   }
 
+  addLike(member: Member){
+      this.memberService.addLike(member.userName).subscribe(() => {
+        this.toastr.success('You have liked '+ member.knowAs);
+      });
+  }
 }

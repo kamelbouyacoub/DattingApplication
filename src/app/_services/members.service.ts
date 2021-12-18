@@ -90,6 +90,21 @@ export class MembersService {
     return this.http.delete(environment.user + '/delete-photo/'+ photoId);
   } 
 
+  addLike(username: string){
+    return this.http.post(environment.like + "/"+ username, {});
+  }
+
+  getLikes(predicate: string, pageNumer: number, pageSize: number)
+  {
+    let params = this.getPaginationHeaders(pageNumer, pageSize);
+    params = params.append('predicate', predicate);
+
+    return this.getPaginatedResult<Partial<Member[]>>(environment.like, params);
+  }
+
+  
+
+
   private getPaginatedResult<T>(url: string, params: HttpParams) {
     const paginatedResult: PaginatedResult<T> = new PaginatedResult<T>();
 
