@@ -7,7 +7,8 @@ export const environment = {
   user: 'https://localhost:5001/api/Users', 
   account: 'https://localhost:5001/api/Account', 
   buggy: 'https://localhost:5001/api/Buggy', 
-  like: 'https://localhost:5001/api/Likes' 
+  like: 'https://localhost:5001/api/Likes' ,
+  message: 'https://localhost:5001/api/Messages' 
 };
 
 /*

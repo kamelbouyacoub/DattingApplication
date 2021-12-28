@@ -11,12 +11,13 @@ import { MemberListComponent } from './members/member-list/member-list.component
 import { MessagesComponent } from './members/messages/messages.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { PreventUnsavedHangesGuard } from './_guards/prevent-unsaved-hanges.guard';
+import { MemberDetailedResolver } from './_resolvers/member-details.resolver';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: '', runGuardsAndResolvers: 'always', canActivate:[AuthGuard], children:[
       {path: 'members', component: MemberListComponent},
-      {path: 'members/:username', component: MemberDetailComponent},
+      {path: 'members/:username', component: MemberDetailComponent, resolve:{member: MemberDetailedResolver}},
       {path: 'member/edit', component: MemberEditComponent, canDeactivate: [PreventUnsavedHangesGuard]},
       {path: 'list', component: ListsComponent},
       {path: 'messages', component: MessagesComponent}
