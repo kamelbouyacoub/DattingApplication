@@ -9,7 +9,8 @@ export const environment = {
   account: 'https://localhost:5001/api/Account', 
   buggy: 'https://localhost:5001/api/Buggy', 
   like: 'https://localhost:5001/api/Likes' ,
-  message: 'https://localhost:5001/api/Messages' 
+  message: 'https://localhost:5001/api/Messages',
+  hubUrl: 'https://localhost:5001/hubs',
 };
 
 /*
